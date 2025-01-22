@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Classifier</title>
+</head>
+<body>
+    <h1>Fake News Classifier</h1>
+    <form method="POST">
+        <label for="headline">Enter News Headline:</label>
+        <input type="text" id="headline" name="headline" required>
+        <button type="submit">Classify</button>
+    </form>
+    {% if prediction %}
+    <h2>Result: {{ prediction }}</h2>
+    <p>Headline: {{ headline }}</p>
+    {% endif %}
+</body>
+</html>
+
